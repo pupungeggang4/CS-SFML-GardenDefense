@@ -5,11 +5,14 @@ using SFML.System;
 
 namespace GardenDefense
 {
-    class Program {
-        private static void Main() {
+    class Program
+    {
+        private static void Main()
+        {
+            Asset.LoadAsset();
             Game game = new Game();
-            game.init();
-            game.run();
+            game.Init();
+            game.Run();
         }
     }
 }
