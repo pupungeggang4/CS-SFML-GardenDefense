@@ -8,11 +8,20 @@ namespace GardenDefense
     class Game
     {
         public RenderWindow window;
+        public uint width, height;
         public void init()
         {
-            var mode = new VideoMode((800, 600));
+            var monitor = VideoMode.DesktopMode;
+            if (monitor.Size.X > 2560) {
+                width = 1600; height = 1200;
+            } else if (monitor.Size.X > 1920) {
+                width = 1200; height = 900;
+            } else {
+                width = 800; height = 600;
+            }
+            var mode = new VideoMode((width, height));
             window = new RenderWindow(mode, "Garden Defense");
-            window.Closed += (_, _) => window.Close();
+            window.Closed += (sender, e) => window.Close();
         }
 
         public void run()
