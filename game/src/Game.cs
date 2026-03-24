@@ -8,6 +8,7 @@ namespace GardenDefense
     class Game
     {
         public RenderWindow window;
+        public View viewUI;
         public uint width, height;
 
         public Scene scene;
@@ -29,7 +30,9 @@ namespace GardenDefense
                 width = 800; height = 600;
             }
             var mode = new VideoMode((width, height));
+            viewUI = new View(new FloatRect((0, 0), (800, 600)));
             window = new RenderWindow(mode, "Garden Defense");
+            window.SetView(viewUI);
             window.Closed += (sender, e) => window.Close();
         }
 

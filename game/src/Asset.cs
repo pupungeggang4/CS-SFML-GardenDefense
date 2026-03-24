@@ -11,6 +11,7 @@ namespace GardenDefense
         public static void LoadAsset()
         {
             neodgm = new Font("asset/font/neodgm.ttf");
+            neodgm.SetSmooth(false);
         }
     }
 }
