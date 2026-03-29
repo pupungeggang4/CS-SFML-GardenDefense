@@ -17,17 +17,12 @@ namespace GardenDefense
         public void Init()
         {
             var monitor = VideoMode.DesktopMode;
-            if (monitor.Size.X > 2560)
-            {
-                width = 1600; height = 1200;
-            }
-            else if (monitor.Size.X > 1920)
-            {
-                width = 1200; height = 900;
-            }
-            else
-            {
-                width = 800; height = 600;
+            if (monitor.Size.X * 3 / 4 > monitor.Size.Y) {
+                height = (uint)(monitor.Size.Y * 0.8);
+                width = height * 4 / 3;
+            } else {
+                width = (uint)(monitor.Size.X * 0.8);
+                height = width * 3 / 4;
             }
             var mode = new VideoMode((width, height));
             viewUI = new View(new FloatRect((0, 0), (800, 600)));
