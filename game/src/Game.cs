@@ -7,50 +7,53 @@ namespace GardenDefense
 {
     class Game
     {
-        public RenderWindow window;
-        public View viewUI;
-        public uint width, height;
+        public RenderWindow Window;
+        public View ViewUI;
+        public uint Width, Height;
 
-        public Scene scene;
-        public string state;
+        public Scene Scene;
+        public string State;
 
         public void Init()
         {
             var monitor = VideoMode.DesktopMode;
             if (monitor.Size.X * 3 / 4 > monitor.Size.Y) {
-                height = (uint)(monitor.Size.Y * 0.8);
-                width = height * 4 / 3;
+                Height = (uint)(monitor.Size.Y * 0.8);
+                Width = Height * 4 / 3;
             } else {
-                width = (uint)(monitor.Size.X * 0.8);
-                height = width * 3 / 4;
+                Width = (uint)(monitor.Size.X * 0.8);
+                Height = Width * 3 / 4;
             }
-            var mode = new VideoMode((width, height));
-            viewUI = new View(new FloatRect((0, 0), (800, 600)));
-            window = new RenderWindow(mode, "Garden Defense");
-            window.SetView(viewUI);
-            window.Closed += (sender, e) => window.Close();
+            var mode = new VideoMode((Width, Height));
+            ViewUI = new View(new FloatRect((0, 0), (800, 600)));
+            Window = new RenderWindow(mode, "Garden Defense");
+            Window.SetView(ViewUI);
+            Window.Closed += (sender, e) => Window.Close();
+            Window.MouseButtonReleased += (sender, e) => MouseUp(sender, e);
         }
 
         public void Run()
         {
-            scene = new SceneTitle();
+            Scene = new SceneTitle();
             Loop();
         }
 
         public void Loop()
         {
-            while (window.IsOpen)
+            while (Window.IsOpen)
             {
-                window.DispatchEvents();
-                window.Clear(Color.White);
-                Render();
-                window.Display();
+                Window.DispatchEvents();
+                Scene.Update(this);
+                Window.Clear(Color.White);
+                Scene.Render(this);
+                Window.Display();
             }
         }
 
-        public void Render()
+        public void MouseUp(object sender, MouseButtonEventArgs e)
         {
-            scene.Render(this);
+            Vector2f pos = new Vector2f(e.Position.X * 800 / Width, e.Position.Y * 600 / Height);
+            Scene.MouseUp(this, pos, e.Button);
         }
     }
 }

@@ -11,7 +11,18 @@ namespace GardenDefense
         {
 
         }
+
+        public virtual void Update(Game game)
+        {
+
+        }
+
         public virtual void Render(Game game)
+        {
+
+        }
+
+        public virtual void MouseUp(Game game, Vector2f pos, Mouse.Button button)
         {
 
         }
