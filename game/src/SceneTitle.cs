@@ -17,25 +17,25 @@ namespace GardenDefense
         public RectangleShape ButtonErase = new RectangleShape(UI.TitleButtonSize);
         public RectangleShape ButtonQuit = new RectangleShape(UI.TitleButtonSize);
 
-        public SceneTitle()
+        public SceneTitle(Game game)
         {
-            TextTitle.Position = UI.Title["text_title"];
+            TextTitle.Position = UI.Title["TextTitle"];
             TextTitle.FillColor = Color.Black;
-            TextStart.Position = UI.Title["text_start"];
+            TextStart.Position = UI.Title["TextStart"];
             TextStart.FillColor = Color.Black;
-            TextCollection.Position = UI.Title["text_collection"];
+            TextCollection.Position = UI.Title["TextCollection"];
             TextCollection.FillColor = Color.Black;
-            TextErase.Position = UI.Title["text_erase"];
+            TextErase.Position = UI.Title["TextErase"];
             TextErase.FillColor = Color.Black;
-            TextQuit.Position = UI.Title["text_quit"];
+            TextQuit.Position = UI.Title["TextQuit"];
             TextQuit.FillColor = Color.Black;
-            ButtonStart.Position = UI.Title["button_start"];
+            ButtonStart.Position = UI.Title["ButtonStart"];
             ButtonStart.FillColor = Color.Yellow;
-            ButtonCollection.Position = UI.Title["button_collection"];
+            ButtonCollection.Position = UI.Title["ButtonCollection"];
             ButtonCollection.FillColor = Color.Cyan;
-            ButtonErase.Position = UI.Title["button_erase"];
+            ButtonErase.Position = UI.Title["ButtonErase"];
             ButtonErase.FillColor = Color.Yellow;
-            ButtonQuit.Position = UI.Title["button_quit"];
+            ButtonQuit.Position = UI.Title["ButtonQuit"];
             ButtonQuit.FillColor = Color.Cyan;
         }
 

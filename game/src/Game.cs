@@ -34,7 +34,7 @@ namespace GardenDefense
 
         public void Run()
         {
-            Scene = new SceneTitle();
+            Scene = new SceneTitle(this);
             Loop();
         }
 

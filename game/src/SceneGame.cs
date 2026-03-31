@@ -9,7 +9,7 @@ namespace GardenDefense
     {
         public SceneGame(Game game)
         {
-
+            
         }
 
         public override void Update(Game game)
@@ -19,12 +19,12 @@ namespace GardenDefense
 
         public override void Render(Game game)
         {
-
+            
         }
 
         public override void MouseUp(Game game, Vector2f pos, Mouse.Button button)
         {
-
+            
         }
     }
 }

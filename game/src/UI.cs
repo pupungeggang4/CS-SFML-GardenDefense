@@ -8,10 +8,15 @@ namespace GardenDefense
     static class UI {
         public static Dictionary<string, Vector2f> Title = new Dictionary<string, Vector2f>
         {
-            {"text_title", (20, 20)}, {"text_start", (180, 140)}, {"text_collection", (180, 220)},
-            {"text_erase", (180, 300)}, {"text_quit", (180, 380)},
-            {"button_start", (160, 120)}, {"button_collection", (160, 200)}, {"button_erase", (160, 280)}, {"button_quit", (160, 360)}
+            {"TextTitle", (20, 20)}, {"TextStart", (180, 140)}, {"TextCollection", (180, 220)},
+            {"TextErase", (180, 300)}, {"TextQuit", (180, 380)},
+            {"ButtonStart", (160, 120)}, {"ButtonCollection", (160, 200)}, {"ButtonErase", (160, 280)}, {"ButtonQuit", (160, 360)}
+        };
+        public static Dictionary<string, Vector2f> CharacterSelect = new Dictionary<string, Vector2f>
+        {
+            {"TextTitle", (20, 20)}, {"ButtonBack", (700, 20)}
         };
         public static Vector2f TitleButtonSize = (480, 80);
+        public static Vector2f ButtonLargeSize = (80, 80);
     }
 }
