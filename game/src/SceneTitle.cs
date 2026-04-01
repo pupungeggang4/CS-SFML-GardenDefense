@@ -65,6 +65,10 @@ namespace GardenDefense
                 {
                     game.Scene = new SceneCharacterSelect(game);
                 }
+                else if (ButtonCollection.GetGlobalBounds().Contains(pos))
+                {
+                    game.Scene = new SceneCollection(game);
+                }
                 else if (ButtonQuit.GetGlobalBounds().Contains(pos))
                 {
                     game.Window.Close();
