@@ -5,7 +5,7 @@ using SFML.System;
 
 namespace GardenDefense
 {
-    static class UI {
+    public static class UI {
         public static Dictionary<string, Vector2f> Title = new Dictionary<string, Vector2f>
         {
             {"TextTitle", (20, 20)}, {"TextStart", (180, 140)}, {"TextCollection", (180, 220)},

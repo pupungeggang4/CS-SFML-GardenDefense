@@ -5,7 +5,7 @@ using SFML.System;
 
 namespace GardenDefense
 {
-    class SceneGame : Scene
+    public class SceneGame : Scene
     {
         public SceneGame(Game game)
         {

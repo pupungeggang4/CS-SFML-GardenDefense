@@ -5,7 +5,7 @@ using SFML.System;
 
 namespace GardenDefense
 {
-    class Asset
+    public class Asset
     {
         public static Font Neodgm;
         public static void LoadAsset()

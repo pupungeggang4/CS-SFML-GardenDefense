@@ -5,7 +5,7 @@ using SFML.System;
 
 namespace GardenDefense
 {
-    class SceneTitle : Scene
+    public class SceneTitle : Scene
     {
         public Text TextTitle = new Text(Asset.Neodgm, "Garden Defense", 32);
         public Text TextStart = new Text(Asset.Neodgm, "Start Game", 32);

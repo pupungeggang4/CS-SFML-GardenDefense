@@ -5,7 +5,7 @@ using SFML.System;
 
 namespace GardenDefense
 {
-    class Program
+    public class Program
     {
         private static void Main()
         {

@@ -5,7 +5,7 @@ using SFML.System;
 
 namespace GardenDefense
 {
-    class Game
+    public class Game
     {
         public RenderWindow Window;
         public View ViewUI;

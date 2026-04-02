@@ -5,7 +5,7 @@ using SFML.System;
 
 namespace GardenDefense
 {
-    class SceneCharacterSelect : Scene
+    public class SceneCharacterSelect : Scene
     {
 
         public Text TextTitle = new Text(Asset.Neodgm, "Select character", 32);

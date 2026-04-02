@@ -5,7 +5,7 @@ using SFML.System;
 
 namespace GardenDefense
 {
-    class Button
+    public class Button
     {
         public RectangleShape Rect;
         public Text Label;
