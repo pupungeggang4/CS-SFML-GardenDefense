@@ -14,9 +14,10 @@ namespace GardenDefense
         };
         public static Dictionary<string, Vector2f> CharacterSelect = new Dictionary<string, Vector2f>
         {
-            {"TextTitle", (20, 20)}, {"ButtonBack", (700, 20)}
+            {"TextTitle", (20, 20)}, {"ButtonBack", (700, 20)}, {"ButtonStart", (620, 500)}
         };
         public static Vector2f TitleButtonSize = (480, 80);
         public static Vector2f ButtonLargeSize = (80, 80);
+        public static Vector2f ButtonLargeWideSize = (160, 80);
     }
 }
