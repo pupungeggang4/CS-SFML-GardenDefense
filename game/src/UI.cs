@@ -18,7 +18,17 @@ namespace GardenDefense
             {"ButtonCharacterStart", (20, 120)}, {"ButtonCharacterSize", (120, 120)}, {"ButtonCharacterInterval", (140, 140)},
             {"ButtonBack", (700, 20)}, {"ButtonStart", (620, 500)}
         };
+        public static Dictionary<string, Vector2f> Battle = new Dictionary<string, Vector2f>
+        {
+            {"ButtonMenu", (700, 20)}
+        };
+        public static Dictionary<string, Vector2f> Menu = new Dictionary<string, Vector2f>
+        {
+            {"Pos", (160, 120)}, {"Size", (480, 320)}, {"TextTitle", (180, 140)},
+            {"ButtonResume", (160, 200)}, {"ButtonExit", (160, 280)}, {"ButtonQuit", (160, 360)}
+        };
         public static Vector2f TitleButtonSize = (480, 80);
+        public static Vector2f MenuButtonSize = (480, 80);
         public static Vector2f ButtonLargeSize = (80, 80);
         public static Vector2f ButtonLargeWideSize = (160, 80);
     }

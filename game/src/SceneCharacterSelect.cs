@@ -68,7 +68,7 @@ namespace GardenDefense
                 {
                     if (SelectedCharacter != -1)
                     {
-                        game.Scene = new SceneGame(game);
+                        game.Scene = new SceneBattle(game);
                     }
                 }
             }

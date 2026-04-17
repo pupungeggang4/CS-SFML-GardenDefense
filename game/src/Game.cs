@@ -13,6 +13,7 @@ namespace GardenDefense
 
         public Scene Scene;
         public string State;
+        public bool Menu;
 
         public void Init()
         {
