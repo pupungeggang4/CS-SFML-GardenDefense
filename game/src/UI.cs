@@ -20,13 +20,15 @@ namespace GardenDefense
         };
         public static Dictionary<string, Vector2f> Battle = new Dictionary<string, Vector2f>
         {
-            {"ButtonMenu", (700, 20)}
+            {"ButtonMenu", (700, 20)},
+            {"LevelText", (20, 466)}, {"EnergyText", (120, 466)}, {"EnergyBar", (200, 470)}, {"EnergyBarSize", (200, 20)}
         };
         public static Dictionary<string, Vector2f> Menu = new Dictionary<string, Vector2f>
         {
             {"Pos", (160, 120)}, {"Size", (480, 320)}, {"TextTitle", (180, 140)},
             {"ButtonResume", (160, 200)}, {"ButtonExit", (160, 280)}, {"ButtonQuit", (160, 360)}
         };
+
         public static Vector2f TitleButtonSize = (480, 80);
         public static Vector2f MenuButtonSize = (480, 80);
         public static Vector2f ButtonLargeSize = (80, 80);

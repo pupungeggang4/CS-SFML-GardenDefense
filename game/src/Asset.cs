@@ -13,7 +13,7 @@ namespace GardenDefense
         public static void LoadAsset()
         {
             Neodgm = new Font("asset/font/neodgm.ttf");
-            Neodgm.SetSmooth(false);
+            Neodgm.SetSmooth(true);
             ButtonUpgrade = new Texture("asset/image/button_upgrade.png");
         }
     }

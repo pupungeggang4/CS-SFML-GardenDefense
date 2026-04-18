@@ -9,11 +9,12 @@ namespace GardenDefense
     {
         public MenuWindow MenuWindowBattle;
         public Button ButtonMenu = new Button(new FloatRect(UI.Battle["ButtonMenu"], UI.ButtonLargeSize), "");
-        public TextureButton ButtonUpgrade = new TextureButton(new Vector2f(20, 500), Asset.ButtonUpgrade);
+        public BattleLower BattleLowerUI;
 
         public SceneBattle(Game game)
         {
-            MenuWindowBattle = new MenuWindow();   
+            MenuWindowBattle = new MenuWindow();
+            BattleLowerUI = new BattleLower();
         }
 
         public override void Update(Game game)
@@ -24,7 +25,7 @@ namespace GardenDefense
         public override void Render(Game game)
         {
             ButtonMenu.Render(game);
-            ButtonUpgrade.Render(game);
+            BattleLowerUI.Render(game);
 
             if (game.Menu == true)
             {
