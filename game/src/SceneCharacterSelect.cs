@@ -38,12 +38,12 @@ namespace GardenDefense
         public override void Render(Game game)
         {
             game.Window.Draw(TextTitle);
-            RenderFunc.RenderButton(game, ButtonBack);
-            RenderFunc.RenderButton(game, ButtonStart);
+            ButtonBack.Render(game);
+            ButtonStart.Render(game);
 
             for (int i = 0; i < 6; i++)
             {
-                RenderFunc.RenderButton(game, ButtonCharacter[i]);
+                ButtonCharacter[i].Render(game);
             }
         }
 

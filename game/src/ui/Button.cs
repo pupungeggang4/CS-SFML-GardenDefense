@@ -22,6 +22,12 @@ namespace GardenDefense
             Label.FillColor = Color.Black;
         }
 
+        public void Render(Game game)
+        {
+            game.Window.Draw(Rect);
+            game.Window.Draw(Label);
+        }
+
         public bool IsMouseOver(Vector2f pos)
         {
             return Rect.GetGlobalBounds().Contains(pos);

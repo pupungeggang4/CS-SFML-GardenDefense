@@ -30,9 +30,9 @@ namespace GardenDefense
         {
             game.Window.Draw(Background);
             game.Window.Draw(TextTitle);
-            RenderFunc.RenderButton(game, ButtonResume);
-            RenderFunc.RenderButton(game, ButtonExit);
-            RenderFunc.RenderButton(game, ButtonQuit);
+            ButtonResume.Render(game);
+            ButtonExit.Render(game);
+            ButtonQuit.Render(game);
         }
     }
 }

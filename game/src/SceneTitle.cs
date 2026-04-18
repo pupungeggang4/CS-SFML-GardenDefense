@@ -29,10 +29,10 @@ namespace GardenDefense
         public override void Render(Game game)
         {
             game.Window.Draw(TextTitle);
-            RenderFunc.RenderButton(game, ButtonStart);
-            RenderFunc.RenderButton(game, ButtonCollection);
-            RenderFunc.RenderButton(game, ButtonErase);
-            RenderFunc.RenderButton(game, ButtonQuit);
+            ButtonStart.Render(game);
+            ButtonCollection.Render(game);
+            ButtonErase.Render(game);
+            ButtonQuit.Render(game);
         }
 
         public override void MouseUp(Game game, Vector2f pos, Mouse.Button button)
