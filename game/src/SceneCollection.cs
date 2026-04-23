@@ -7,9 +7,10 @@ namespace GardenDefense
 {
     public class SceneCollection : Scene
     {
+        public Button ButtonBack;
         public SceneCollection(Game game)
         {
-
+            ButtonBack = new Button(new FloatRect(UI.Collection["ButtonBack"], UI.ButtonLargeSize), "");
         }
 
         public override void Update(Game game)
@@ -19,12 +20,18 @@ namespace GardenDefense
 
         public override void Render(Game game)
         {
-
+            ButtonBack.Render(game);
         }
 
         public override void MouseUp(Game game, Vector2f pos, Mouse.Button button)
         {
-
+            if (button == Mouse.Button.Left)
+            {
+                if (ButtonBack.IsMouseOver(pos))
+                {
+                    game.Scene = new SceneTitle(game);
+                }
+            }
         }
     }
 }

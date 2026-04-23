@@ -12,8 +12,11 @@ namespace GardenDefense
 
         public TextureButton(Vector2f pos, Texture tex)
         {
-            Tex = tex;
-            Sp = new Sprite(Tex);
+            if (tex != null)
+            {
+                Tex = tex;
+                Sp = new Sprite(Tex);
+            }
             Sp.Position = new Vector2f(pos.X, pos.Y);
         }
 

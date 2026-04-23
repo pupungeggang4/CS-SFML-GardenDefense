@@ -8,6 +8,7 @@ namespace GardenDefense
     public class SceneBattle : Scene
     {
         public MenuWindow MenuWindowBattle;
+        public RewardWindow RewardWindowBattle;
         public Button ButtonMenu = new Button(new FloatRect(UI.Battle["ButtonMenu"], UI.ButtonLargeSize), "");
         public BattleLower BattleLowerUI;
 

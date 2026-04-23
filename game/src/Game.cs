@@ -12,8 +12,8 @@ namespace GardenDefense
         public uint Width, Height;
 
         public Scene Scene;
-        public string State;
-        public bool Menu;
+        public string State = "";
+        public bool Menu = false;
 
         public void Init()
         {

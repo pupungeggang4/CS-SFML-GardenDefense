@@ -23,6 +23,10 @@ namespace GardenDefense
             {"ButtonMenu", (700, 20)},
             {"LevelText", (20, 466)}, {"EnergyText", (120, 466)}, {"EnergyBar", (200, 470)}, {"EnergyBarSize", (200, 20)}
         };
+        public static Dictionary<string, Vector2f> Collection = new Dictionary<string, Vector2f>
+        {
+            {"ButtonBack", (700, 20)}
+        };
         public static Dictionary<string, Vector2f> Menu = new Dictionary<string, Vector2f>
         {
             {"Pos", (160, 120)}, {"Size", (480, 320)}, {"TextTitle", (180, 140)},
