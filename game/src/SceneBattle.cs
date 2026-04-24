@@ -9,7 +9,7 @@ namespace GardenDefense
     {
         public MenuWindow MenuWindowBattle;
         public RewardWindow RewardWindowBattle;
-        public Button ButtonMenu = new Button(new FloatRect(UI.Battle["ButtonMenu"], UI.ButtonLargeSize), "");
+        public SimpleButton ButtonMenu = new SimpleButton(UI.Battle["ButtonMenu"], "");
         public BattleLower BattleLowerUI;
 
         public SceneBattle(Game game)
@@ -40,23 +40,23 @@ namespace GardenDefense
             {
                 if (game.Menu == false)
                 {
-                    if (ButtonMenu.IsMouseOver(pos))
+                    if (ButtonMenu.Contains(pos))
                     {
                         game.Menu = true;
                     }
                 }
                 else
                 {
-                    if (MenuWindowBattle.ButtonResume.IsMouseOver(pos))
+                    if (MenuWindowBattle.ButtonResume.Contains(pos))
                     {
                         game.Menu = false;
                     }
-                    else if (MenuWindowBattle.ButtonExit.IsMouseOver(pos))
+                    else if (MenuWindowBattle.ButtonExit.Contains(pos))
                     {
                         game.Menu = false;
                         game.Scene = new SceneTitle(game);
                     }
-                    else if (MenuWindowBattle.ButtonQuit.IsMouseOver(pos))
+                    else if (MenuWindowBattle.ButtonQuit.Contains(pos))
                     {
                         game.Window.Close();
                     }

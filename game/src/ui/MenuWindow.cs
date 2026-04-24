@@ -9,21 +9,21 @@ namespace GardenDefense
     {
         public RectangleShape Background;
         public Text TextTitle;
-        public Button ButtonResume, ButtonExit, ButtonQuit;
+        public SimpleButton ButtonResume, ButtonExit, ButtonQuit;
 
         public MenuWindow()
         {
-            Background = new RectangleShape(UI.Menu["Size"]);
-            Background.Position = new Vector2f(UI.Menu["Pos"].X, UI.Menu["Pos"].Y);
+            Background = new RectangleShape((UI.Menu["Size"][0], UI.Menu["Size"][1]));
+            Background.Position = new Vector2f(UI.Menu["Pos"][0], UI.Menu["Pos"][1]);
             Background.FillColor = Color.Cyan;
             TextTitle = new Text(Asset.Neodgm, "Paused", 32);
-            TextTitle.Position = new Vector2f(UI.Menu["TextTitle"].X, UI.Menu["TextTitle"].Y);
+            TextTitle.Position = new Vector2f(UI.Menu["TextTitle"][0], UI.Menu["TextTitle"][1]);
             TextTitle.FillColor = Color.Black;
-            ButtonResume = new Button(new FloatRect(UI.Menu["ButtonResume"], UI.MenuButtonSize), "Resume");
-            ButtonResume.Rect.FillColor = Color.Yellow;
-            ButtonExit = new Button(new FloatRect(UI.Menu["ButtonExit"], UI.MenuButtonSize), "Exit to Title");
-            ButtonQuit = new Button(new FloatRect(UI.Menu["ButtonQuit"], UI.MenuButtonSize), "Quit Game");
-            ButtonQuit.Rect.FillColor = Color.Yellow;
+            ButtonResume = new SimpleButton(UI.Menu["ButtonResume"], "Resume");
+            ButtonResume.Background.FillColor = Color.Yellow;
+            ButtonExit = new SimpleButton(UI.Menu["ButtonExit"], "Exit to Title");
+            ButtonQuit = new SimpleButton(UI.Menu["ButtonQuit"], "Quit Game");
+            ButtonQuit.Background.FillColor = Color.Yellow;
         }
 
         public void Render(Game game)

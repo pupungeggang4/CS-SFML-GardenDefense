@@ -8,17 +8,17 @@ namespace GardenDefense
     public class SceneTitle : Scene
     {
         public Text TextTitle = new Text(Asset.Neodgm, "Garden Defense", 32);
-        public Button ButtonStart = new Button(new FloatRect((160.0f, 120.0f), (480.0f, 80.0f)), "Start Game");
-        public Button ButtonCollection = new Button(new FloatRect((160.0f, 200.0f), (480.0f, 80.0f)), "Collection");
-        public Button ButtonErase = new Button(new FloatRect((160.0f, 280.0f), (480.0f, 80.0f)), "Erase Data");
-        public Button ButtonQuit = new Button(new FloatRect((160.0f, 360.0f), (480.0f, 80.0f)), "Quit Game");
+        public SimpleButton ButtonStart = new SimpleButton(UI.Title["ButtonStart"], "Start Game");
+        public SimpleButton ButtonCollection = new SimpleButton(UI.Title["ButtonCollection"], "Collection");
+        public SimpleButton ButtonErase = new SimpleButton(UI.Title["ButtonErase"], "Erase Data");
+        public SimpleButton ButtonQuit = new SimpleButton(UI.Title["ButtonQuit"], "Quit Game");
 
         public SceneTitle(Game game)
         {
-            TextTitle.Position = UI.Title["TextTitle"];
+            TextTitle.Position = new Vector2f(UI.Title["TextTitle"][0], UI.Title["TextTitle"][1]);
             TextTitle.FillColor = Color.Black;
-            ButtonCollection.Rect.FillColor = Color.Yellow;
-            ButtonQuit.Rect.FillColor = Color.Yellow;
+            ButtonCollection.Background.FillColor = Color.Yellow;
+            ButtonQuit.Background.FillColor = Color.Yellow;
         }
 
         public override void Update(Game game)
@@ -39,15 +39,15 @@ namespace GardenDefense
         {
             if (button == Mouse.Button.Left)
             {
-                if (ButtonStart.IsMouseOver(pos))
+                if (ButtonStart.Contains(pos))
                 {
                     game.Scene = new SceneCharacterSelect(game);
                 }
-                if (ButtonCollection.IsMouseOver(pos))
+                if (ButtonCollection.Contains(pos))
                 {
                     game.Scene = new SceneCollection(game);
                 }
-                else if (ButtonQuit.IsMouseOver(pos))
+                else if (ButtonQuit.Contains(pos))
                 {
                     game.Window.Close();
                 }

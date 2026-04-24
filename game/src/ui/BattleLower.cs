@@ -16,13 +16,13 @@ namespace GardenDefense
         {
             ButtonUpgrade = new TextureButton(new Vector2f(20, 500), Asset.ButtonUpgrade);
             LevelText = new Text(Asset.Neodgm, "Lv.1", 20);
-            LevelText.Position = new Vector2f(UI.Battle["LevelText"].X, UI.Battle["LevelText"].Y);
+            LevelText.Position = new Vector2f(UI.Battle["LevelText"][0], UI.Battle["LevelText"][1]);
             LevelText.FillColor = Color.Black;
             EnergyText = new Text(Asset.Neodgm, "6.0/6.0", 20);
-            EnergyText.Position = new Vector2f(UI.Battle["EnergyText"].X, UI.Battle["EnergyText"].Y);
+            EnergyText.Position = new Vector2f(UI.Battle["EnergyText"][0], UI.Battle["EnergyText"][1]);
             EnergyText.FillColor = Color.Black;
-            EnergyBar = new RectangleShape(new Vector2f(UI.Battle["EnergyBarSize"].X, UI.Battle["EnergyBarSize"].Y));
-            EnergyBar.Position = new Vector2f(UI.Battle["EnergyBar"].X, UI.Battle["EnergyBar"].Y);
+            EnergyBar = new RectangleShape((UI.Battle["EnergyBarSize"][0], UI.Battle["EnergyBarSize"][1]));
+            EnergyBar.Position = new Vector2f(UI.Battle["EnergyBar"][0], UI.Battle["EnergyBar"][1]);
             EnergyBar.FillColor = new Color(255, 127, 0, 255);
         }
 
